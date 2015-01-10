@@ -1,0 +1,14 @@
+<!-- This is a sample lanuch file, please change it based on your needs -->
+
+<launch>
+
+	<!-- DRIVERS -->
+	<node pkg="sys_wakeonlan"
+			name="sys_wakeonlan"
+			type="sys_wakeonlan"
+			args="com.tactfactory.ros.home.WolNode"
+			output="screen">
+		<param name="tf_prefix" value="sys_wakeonlan" />
+	</node>
+	
+</launch>

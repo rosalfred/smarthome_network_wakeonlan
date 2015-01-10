@@ -1,0 +1,65 @@
+apply plugin: 'ros-java'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+apply plugin: 'catkin'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+defaultTasks 'install', 'installApp'
+
+apply plugin: 'application'
+mainClassName = 'org.ros.RosRun'
+
+group = 'com.alfred.ros'
+
+buildscript {
+    def rosMavenPath = "$System.env.ROS_MAVEN_PATH".split(':').collect { 'file://' + it }
+    def rosMavenRepository = "$System.env.ROS_MAVEN_REPOSITORY"
+    
+    if ( rosMavenRepository == 'null' ) {
+        rosMavenRepository = "https://github.com/rosjava/rosjava_mvn_repo/raw/master"
+    }
+    
+    repositories {
+        rosMavenPath.each { p ->
+            maven {
+                url p
+            }
+        }
+        mavenLocal()
+        maven {
+            url rosMavenRepository
+        }
+    }
+    dependencies {
+        classpath group: 'org.ros.rosjava_bootstrap', name: 'gradle_plugins', version: '0.1.20'
+    }
+}
+
+allprojects {
+    version = project.catkin.pkg.version
+}
+
+dependencies {
+  compile 'org.ros.rosjava_core:rosjava:[0,)'
+}
+
+startScripts {
+    outputs.upToDateWhen { false }
+
+    doFirst {
+        delete fileTree(dir:'build/scripts')
+        delete fileTree(dir:'build/install')
+    }
+}
+
+installApp {
+    doLast {
+        File link = new File("build/scripts", "$project.name")
+		File target = new File(project.projectDir, "build/install/$project.name/bin/$project.name")
+
+		println "Creating symlink from $link.absolutePath to $target.absolutePath"
+		ant.symlink(link: link.absolutePath, resource: target.absolutePath, overwrite: true)
+    }
+}

@@ -6,9 +6,9 @@
 	<node pkg="sys_wakeonlan"
 			name="sys_wakeonlan"
 			type="sys_wakeonlan"
-			args="com.tactfactory.ros.home.WolNode"
+			args="com.alfred.ros.home.WolNode"
 			output="screen">
 		<param name="tf_prefix" value="sys_wakeonlan" />
 	</node>
-	
+
 </launch>

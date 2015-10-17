@@ -1,26 +1,11 @@
-apply plugin: 'ros-java'
-apply plugin: 'eclipse'
-apply plugin: 'maven'
-apply plugin: 'catkin'
-
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
-
-defaultTasks 'install', 'installApp'
-
-apply plugin: 'application'
-mainClassName = 'org.ros.RosRun'
-
-group = 'com.alfred.ros'
-
 buildscript {
     def rosMavenPath = "$System.env.ROS_MAVEN_PATH".split(':').collect { 'file://' + it }
     def rosMavenRepository = "$System.env.ROS_MAVEN_REPOSITORY"
-    
+
     if ( rosMavenRepository == 'null' ) {
         rosMavenRepository = "https://github.com/rosjava/rosjava_mvn_repo/raw/master"
     }
-    
+
     repositories {
         rosMavenPath.each { p ->
             maven {
@@ -33,16 +18,30 @@ buildscript {
         }
     }
     dependencies {
-        classpath group: 'org.ros.rosjava_bootstrap', name: 'gradle_plugins', version: '0.1.20'
+        classpath "org.ros.rosjava_bootstrap:gradle_plugins:[0.2,0.3)"
     }
 }
+
+apply plugin: 'application'
+apply plugin: 'ros-java'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+apply plugin: 'catkin'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+defaultTasks 'install', 'installApp'
+
+mainClassName = 'org.ros.RosRun'
+group = 'com.alfred.ros'
 
 allprojects {
     version = project.catkin.pkg.version
 }
 
 dependencies {
-  compile 'org.ros.rosjava_core:rosjava:[0,)'
+    compile 'org.ros.rosjava_core:rosjava:[0,)'
 }
 
 startScripts {

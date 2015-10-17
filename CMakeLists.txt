@@ -3,7 +3,11 @@ cmake_minimum_required(VERSION 2.8.3)
 project(network_wakeonlan)
 set(PACKAGE_PATH "com/alfred/ros")
 
-find_package(catkin REQUIRED rosjava_build_tools)
+find_package(catkin REQUIRED
+  rosjava_build_tools
+
+  std_msgs
+)
 
 catkin_rosjava_setup(publishMavenJavaPublicationToMavenRepository installApp)
 

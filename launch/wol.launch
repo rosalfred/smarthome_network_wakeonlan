@@ -6,7 +6,7 @@
 	<node pkg="sys_wakeonlan"
 			name="sys_wakeonlan"
 			type="sys_wakeonlan"
-			args="com.alfred.ros.home.WolNode"
+			args="org.rosbuilding.wol.WolNode"
 			output="screen">
 		<param name="tf_prefix" value="sys_wakeonlan" />
 	</node>

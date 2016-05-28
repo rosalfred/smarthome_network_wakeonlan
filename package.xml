@@ -9,7 +9,7 @@
   <author email="mick.gaillard@gmail.com">Mickaël Gaillard</author>
   <author email="erwan.lehuitouze@gmail.com">Erwan Le Huitouze</author>
 
-  <license>Apache V2</license
+  <license>Apache V2</license>
 
   <buildtool_depend>catkin</buildtool_depend>
 

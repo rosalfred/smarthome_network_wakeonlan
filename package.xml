@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>network_wakeonlan</name>
-  <version>0.1.64</version>
+  <version>0.1.65</version>
   <description>The wakeonlan package</description>
 
   <maintainer email="mick.gaillard@gmail.com">Mickaël Gaillard</maintainer>

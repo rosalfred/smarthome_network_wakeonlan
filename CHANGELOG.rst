@@ -2,8 +2,8 @@
 Changelog for package network_wakeonlan
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.65 (2016-05-29)
+-------------------
 * Add license
 * Update package file description
 * Contributors: Erwan Le Huitouze

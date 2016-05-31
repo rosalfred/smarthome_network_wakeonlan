@@ -2,8 +2,8 @@
 Changelog for package smarthome_network_wakeonlan
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.66 (2016-05-31)
+-------------------
 * Rename package to smarthome_network_wakeonlan
 * Contributors: Erwan Le Huitouze, Mickael Gaillard
 

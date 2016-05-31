@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>smarthome_network_wakeonlan</name>
-  <version>0.1.65</version>
+  <version>0.1.66</version>
   <description>The wakeonlan package</description>
 
   <maintainer email="mick.gaillard@gmail.com">Mickaël Gaillard</maintainer>

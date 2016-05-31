@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>network_wakeonlan</name>
+  <name>smarthome_network_wakeonlan</name>
   <version>0.1.65</version>
   <description>The wakeonlan package</description>
 

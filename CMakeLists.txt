@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
 
-project(network_wakeonlan)
+project(smarthome_network_wakeonlan)
 set(PACKAGE_PATH "org/rosbuilding")
 
 find_package(catkin REQUIRED

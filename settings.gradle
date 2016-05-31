@@ -14,5 +14,5 @@
  * the License.
  */
 
-rootProject.name = 'network_wakeonlan'
+rootProject.name = 'smarthome_network_wakeonlan'
 

@@ -4,9 +4,9 @@
   <version>0.1.66</version>
   <description>The wakeonlan package</description>
 
-  <maintainer email="mick.gaillard@gmail.com">Mickaël Gaillard</maintainer>
+  <maintainer email="mick.gaillard@gmail.com">Mickael Gaillard</maintainer>
   <maintainer email="erwan.lehuitouze@gmail.com">Erwan Le Huitouze</maintainer>
-  <author email="mick.gaillard@gmail.com">Mickaël Gaillard</author>
+  <author email="mick.gaillard@gmail.com">Mickael Gaillard</author>
   <author email="erwan.lehuitouze@gmail.com">Erwan Le Huitouze</author>
 
   <license>Apache V2</license>
